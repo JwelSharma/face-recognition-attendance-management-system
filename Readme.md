@@ -1,21 +1,40 @@
-# JWEL AMS
+# Face Recognition Attendance Management System
 
-A face recognition based attendance management system built with Python, InsightFace, OpenCV, Streamlit, and Google Sheets integration.
+A real-time face recognition attendance management system built with Python, OpenCV, Streamlit, and InsightFace `buffalo_l`, with optional Google Sheets integration.
+
+## Overview
+
+This project automates attendance tracking using a live camera stream and real-time face recognition. It includes a Streamlit-based admin dashboard for monitoring attendance logs, managing identity datasets, reviewing runtime status, exporting CSV records, and controlling the recognition workflow.
+
+The recognition pipeline uses InsightFace `buffalo_l`, a high-performance face analysis model pack from the InsightFace ecosystem for face detection, landmark estimation, attribute prediction, and embedding-based identity matching. The broader InsightFace project describes its methods as state-of-the-art face analysis techniques. [web:679][web:416][web:681]
 
 ## Features
 
-- Real-time face recognition using InsightFace (`buffalo_l`)
-- Attendance logging to CSV
-- Streamlit admin dashboard
-- Identity dataset management
-- Face encoding pipeline
-- Camera-based face capture utility
-- Optional Google Sheets sync
+- Real-time face recognition from a live camera stream
+- Attendance logging to CSV files
+- Streamlit admin dashboard for analytics and system monitoring
+- Identity dataset management with upload, preview, rename, and delete actions
+- Face capture utility for collecting aligned face images
+- Face encoding pipeline using InsightFace embeddings
+- Optional Google Sheets integration
+- Runtime controls for starting, stopping, and monitoring the recognition system
+
+## Tech Stack
+
+- Python
+- OpenCV
+- InsightFace
+- ONNX Runtime GPU
+- Streamlit
+- Plotly
+- Pandas
+- scikit-learn
+- Google Sheets API
 
 ## Project Structure
 
 ```text
-JWEL-AMS/
+face-recognition-attendance-management-system/
 ├── ams.py
 ├── system.py
 ├── admin_ui.py
@@ -30,15 +49,19 @@ JWEL-AMS/
 ## Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/your-username/jwel-ams.git
-   cd jwel-ams
+   git clone https://github.com/JwelSharma/face-recognition-attendance-management-system.git
+   cd face-recognition-attendance-management-system
    ```
 
-2. Create and activate a virtual environment:
+2. Create a virtual environment:
+
    ```bash
    python -m venv venv
    ```
+
+3. Activate the environment:
 
    On Windows:
    ```bash
@@ -50,7 +73,8 @@ JWEL-AMS/
    source venv/bin/activate
    ```
 
-3. Install dependencies:
+4. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -59,10 +83,10 @@ JWEL-AMS/
 
 Before running the project, prepare the following locally:
 
-- `dataset/` folder with one subfolder per person
-- `credentials.json` for Google Sheets integration, if used
-- camera stream URL in `settings.json` or in your local utility settings
-- CUDA-compatible environment if using GPU acceleration
+- A `dataset/` folder with one subfolder per person
+- A valid camera stream URL
+- `credentials.json` if Google Sheets synchronization is enabled
+- A CUDA-compatible environment for GPU acceleration, if available
 
 These local/private files are intentionally not included in the public repository.
 
@@ -98,19 +122,43 @@ Or pass a person name directly:
 python capture_photos.py John_Doe
 ```
 
-## Notes
+## Model Information
 
-- This repository excludes private runtime files, attendance logs, dataset images, and credentials.
-- Update camera URLs and any local network settings before use.
-- If GPU execution is unavailable, the system may fall back to CPU depending on the installed runtime.
+This project uses the InsightFace `buffalo_l` model pack for face analysis and embedding generation. According to the InsightFace package documentation, `buffalo_l` includes detection, recognition, alignment, attributes, and related face analysis outputs. [web:677][web:679][web:681]
 
-## Tech Stack
+## Repository Notes
 
-- Python
-- OpenCV
-- InsightFace
-- ONNX Runtime GPU
-- Streamlit
-- Plotly
-- Pandas
-- Google Sheets API
+This public repository does not include:
+
+- dataset images
+- attendance logs
+- generated encodings
+- private settings
+- credentials
+- local network camera URLs
+- private Google Sheets links
+
+Update those values locally before running the system.
+
+## Important Note on Model Licensing
+
+The InsightFace Python library code is released under the MIT License, but the pretrained models provided with the library are documented as available for non-commercial research purposes only unless separately licensed. Review the official InsightFace licensing terms before using pretrained models in commercial deployments. [web:675][web:412][web:673]
+
+## Screenshots
+
+Add dashboard screenshots here for a stronger project presentation on GitHub.
+
+Suggested screenshots:
+- Admin dashboard overview
+- Attendance analytics tab
+- Identity manager or live monitor view
+
+## Future Improvements
+
+- Config-based environment setup
+- Better deployment workflow
+- Improved face quality validation
+- Cloud storage or database integration
+- Multi-camera support
+- Authentication and role-based dashboard access
+

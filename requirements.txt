@@ -1,0 +1,14 @@
+streamlit
+plotly
+requests
+opencv-python
+numpy<2
+pandas
+torch
+onnxruntime-gpu
+scikit-learn
+insightface
+gspread
+google-auth
+google-auth-oauthlib
+google-auth-httplib2

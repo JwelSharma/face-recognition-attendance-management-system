@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Project runtime data
+Attendance/
+dataset/
+backup/
+
+# Logs and process files
+*.log
+encode_log.txt
+system_stdout.log
+system_stderr.log
+system.pid
+
+# Generated model/data files
+encodings.pickle
+system_status.json
+settings.json
+
+# Secrets / credentials
+credentials.json
+token.json
+token.pickle
+client_secret.json

@@ -147,13 +147,13 @@ The InsightFace Python library code is released under the MIT License, but the p
 ## Screenshots
 
 ### Admin Dashboard
-<img src="./images/AMS_Admin_Dashboard.jpg" alt="AMS Admin Dashboard" width="900">
+<img src="./images/AMS_Admin_Dashboard.png" alt="AMS Admin Dashboard" width="900">
 
 ### Multi-Camera Monitoring
-<img src="./images/multi_cam_screen-3.jpg" alt="Multi-camera monitoring screen" width="900">
+<img src="./images/multi_cam_screen-3.png" alt="Multi-camera monitoring screen" width="900">
 
 ### Dataset Creation
-<img src="./images/Dataset_creation-2.jpg" alt="Dataset creation workflow" width="900">
+<img src="./images/Dataset_creation-2.png" alt="Dataset creation workflow" width="900">
 
 ## Future Improvements
 

@@ -6,7 +6,7 @@ A real-time face recognition attendance management system built with Python, Ope
 
 This project automates attendance tracking using a live camera stream and real-time face recognition. It includes a Streamlit-based admin dashboard for monitoring attendance logs, managing identity datasets, reviewing runtime status, exporting CSV records, and controlling the recognition workflow.
 
-The recognition pipeline uses InsightFace `buffalo_l`, a high-performance face analysis model pack from the InsightFace ecosystem for face detection, landmark estimation, attribute prediction, and embedding-based identity matching. The broader InsightFace project describes its methods as state-of-the-art face analysis techniques. [web:679][web:416][web:681]
+The recognition pipeline uses InsightFace `buffalo_l`, a high-performance face analysis model pack from the InsightFace ecosystem for face detection, landmark estimation, attribute prediction, and embedding-based identity matching. The broader InsightFace project describes its methods as state-of-the-art face analysis techniques.
 
 ## Features
 
@@ -124,7 +124,7 @@ python capture_photos.py John_Doe
 
 ## Model Information
 
-This project uses the InsightFace `buffalo_l` model pack for face analysis and embedding generation. According to the InsightFace package documentation, `buffalo_l` includes detection, recognition, alignment, attributes, and related face analysis outputs. [web:677][web:679][web:681]
+This project uses the InsightFace `buffalo_l` model pack for face analysis and embedding generation. According to the InsightFace package documentation, `buffalo_l` includes detection, recognition, alignment, attributes, and related face analysis outputs.
 
 ## Repository Notes
 
@@ -142,16 +142,18 @@ Update those values locally before running the system.
 
 ## Important Note on Model Licensing
 
-The InsightFace Python library code is released under the MIT License, but the pretrained models provided with the library are documented as available for non-commercial research purposes only unless separately licensed. Review the official InsightFace licensing terms before using pretrained models in commercial deployments. [web:675][web:412][web:673]
+The InsightFace Python library code is released under the MIT License, but the pretrained models provided with the library are documented as available for non-commercial research purposes only unless separately licensed. Review the official InsightFace licensing terms before using pretrained models in commercial deployments.
 
 ## Screenshots
 
-Add dashboard screenshots here for a stronger project presentation on GitHub.
+### Admin Dashboard
+<img src="./images/AMS_Admin_Dashboard.jpg" alt="AMS Admin Dashboard" width="900">
 
-Suggested screenshots:
-- Admin dashboard overview
-- Attendance analytics tab
-- Identity manager or live monitor view
+### Multi-Camera Monitoring
+<img src="./images/multi_cam_screen-3.jpg" alt="Multi-camera monitoring screen" width="900">
+
+### Dataset Creation
+<img src="./images/Dataset_creation-2.jpg" alt="Dataset creation workflow" width="900">
 
 ## Future Improvements
 
@@ -162,3 +164,6 @@ Suggested screenshots:
 - Multi-camera support
 - Authentication and role-based dashboard access
 
+## License
+
+This repository is shared for educational and portfolio purposes. Review third-party library and model licenses before production or commercial use.
